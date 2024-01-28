@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            background-color: #000000bb;
+            color: #fff;
+            height: auto;
+            width: 270px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: auto;
+        }
+
+        .first{
+            color: blue;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .btn-primary{
+            border: none;
+        }
+        .btn{
+            height: auto;
+            width: 40px;
+            border: none;
+        }
+
+    </style>
+    <h1 class="first">CALCULATOR</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form action="#" name="calculator" class="main">
+                    <input type="text" class="display form-control" name="display" id="display"><br>
+
+                    <input type="button" class="btn" value="C" id="clear" style="background: #31337a; color: white;">
+                    <input type="button" class="btn ms-3" value="->" style="background: #31337a; color: white;" onclick="backSpace()">
+                    <input type="button" class="btn ms-3" value="%" style="background: #31337a; color: white;" onclick="document.calculator.display.value+='%'">
+                    <input type="button" class="btn ms-3" value="/" style="background: red; color: white;" onclick="document.calculator.display.value+='/'"><br><br>
+                    <input type="button" class="btn" value="7" style="background: #0d6efd; color: white;" onclick="seven()">
+                    <input type="button" class="btn ms-3" style="background: #0d6efd; color: white;" value="8" onclick="eight()">
+                    <input type="button" class="btn ms-3" value="9" style="background: #0d6efd; color: white;" onclick="nine()">
+                    <input type="button" class="btn ms-3" value="*" style="background: red; color: white;" onclick="document.calculator.display.value+='*'"><br><br>
+                    <input type="button" class="btn" value="6" style="background: #0d6efd; color: white;" onclick="six()">
+                    <input type="button" class="btn ms-3" value="5" style="background: #0d6efd; color: white;" onclick="five()">
+                    <input type="button" class="btn ms-3" value="4" style="background: #0d6efd; color: white;" onclick="four()">
+                    <input type="button" class="btn ms-3" value="-" style="background: red; color: white;" onclick="document.calculator.display.value+='-'"><br><br>
+                    <input type="button" class="btn" value="3" style="background: #0d6efd; color: white;" onclick="three()">
+                    <input type="button" class="btn ms-3" value="2" style="background: #0d6efd; color: white;" onclick="two()">
+                    <input type="button" class="btn ms-3" value="1" style="background: #0d6efd; color: white;" onclick="one()">
+                    <input type="button" class="btn ms-3" value="+" style="background: red; color: white;" onclick="document.calculator.display.value+='%'"><br><br>
+                    <input type="button" class="btn" value="0" style="background: #0d6efd; color: white;" onclick="zero()">
+                    <input type="button" class="btn ms-3" value="00" style="background: #0d6efd; color: white;" onclick="document.calculator.display.value+='00'">
+                    <input type="button" class="btn ms-3" value="." style="background: #0d6efd; color: white;" onclick="point()">
+                    <input type="button" class="btn ms-3" style="background: red; color: white;" value="=" onclick="document.calculator.display.value = eval(calculator.display.value)">
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector('#clear').addEventListener("click", () => {
+                document.querySelector("#display").value = " ";
+            });
+
+            const backSpace = () => {
+                const num = document.querySelector("#display").value.slice(0, -1);
+                document.querySelector('#display').value = num;
+            }
+
+            const one = () => {
+                if (document.querySelector("#display").value == " ") {
+                    if (document.querySelector("#display").value == "1");
+                }
+                else {
+                    document.querySelector("#display").value = document.querySelector("#display").value + "1";
+                }
+            }
+
+            const two = () => {
+                if (document.querySelector("#display").value == " ") {
+                    if (document.querySelector("#display").value == "2");
+                }
+                else {
+                    document.querySelector("#display").value = document.querySelector("#display").value + "2";
+                }
+            }
+
+            const three = () => {
+                if (document.querySelector("#display").value == " ") {
+                    if (document.querySelector("#display").value == "3");
+                }
+                else {
+                    document.querySelector("#display").value = document.querySelector("#display").value + "3";
+                }
+            }
+
+            const four = () => {
+                if (document.querySelector("#display").value == " ") {
+                    if (document.querySelector("#display").value == "4");
+                }
+                else {
+                    document.querySelector("#display").value = document.querySelector("#display").value + "4";
+                }
+            }
+
+            const five = () => {
+                if (document.querySelector("#display").value == " ") {
+                    if (document.querySelector("#display").value == "5");
+                }
+                else {
+                    document.querySelector("#display").value = document.querySelector("#display").value + "5";
+                }
+            }
+
+            const six = () => {
+                if (document.querySelector("#display").value == " ") {
+                    if (document.querySelector("#display").value == "6");
+                }
+                else {
+                    document.querySelector("#display").value = document.querySelector("#display").value + "6";
+                }
+            }
+
+            const seven = () => {
+                if (document.querySelector("#display").value == " ") {
+                    if (document.querySelector("#display").value == "7");
+                }
+                else {
+                    document.querySelector("#display").value = document.querySelector("#display").value + "7";
+                }
+            }
+
+            const eight = () => {
+                if (document.querySelector("#display").value == " ") {
+                    if (document.querySelector("#display").value == "8");
+                }
+                else {
+                    document.querySelector("#display").value = document.querySelector("#display").value + "8";
+                }
+            }
+
+            const nine = () => {
+                if (document.querySelector("#display").value == " ") {
+                    if (document.querySelector("#display").value == "9");
+                }
+                else {
+                    document.querySelector("#display").value = document.querySelector("#display").value + "9";
+                }
+            }
+
+            const zero = () => {
+                if (document.querySelector("#display").value == " ") {
+                    if (document.querySelector("#display").value == "0");
+                }
+                else {
+                    document.querySelector("#display").value = document.querySelector("#display").value + "0";
+                }
+            }
+
+            const point = () => {
+                if (document.querySelector("#display").value == " ") {
+                    if (document.querySelector("#display").value == ".");
+                }
+                else {
+                    document.querySelector("#display").value = document.querySelector("#display").value + ".";
+                }
+            }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+</html>
